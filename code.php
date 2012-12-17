@@ -63,10 +63,10 @@ echo '</pre>';
 shuffle($followers->ids);
 for($count = 0; $count <= 25; $count++)
 {
-$random_stranger= $twitteroauth->get('users/lookup',array('user_id'=>$followers->ids[$count]));
-//$twitteroauth->post('statuses/update', array('status' => ' Tweet Via AdverTWEETment app '));
-$twitteroauth->post('statuses/update', array('status' => ' Hi :))) *BOT*   @'.$random_stranger[0]->screen_name));
-sleep(rand(1,5));
+	$random_stranger= $twitteroauth->get('users/lookup',array('user_id'=>$followers->ids[$count]));
+	//$twitteroauth->post('statuses/update', array('status' => ' Tweet Via AdverTWEETment app '));
+	$twitteroauth->post('statuses/update', array('status' => ' Hi :))) *BOT*   @'.$random_stranger[0]->screen_name));
+	sleep(rand(1,5));
 }
 
 
